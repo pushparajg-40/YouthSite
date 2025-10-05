@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="/styles/global.css" />
+    <!-- SwiperJS CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="/styles/style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+
+    <title>Home</title>
+</head>
+
+<body>
+
+    <!-- Navbar Container -->
+    <div class="bg-[#00568C] flex justify-between items-center py-[20px] px-2 md:px-0 lg:px-4 lg:justify-center relative">
+
+        <!-- Logo (for mobile) -->
+        <a href="/index.html" class="lg:hidden">
+            <img src="assets/svg/appLogo.svg" alt="Youth Vest Logo" class="w-24 h-20" />
+        </a>
+
+        <!-- Desktop Navbar -->
+        <nav
+            class="relative bg-white px-8 py-4 rounded-full hidden lg:flex items-center justify-between w-[90%] max-w-5xl shadow-lg">
+
+            <!-- Left navigation -->
+            <div class="flex items-center gap-2 lg:gap-8 text-lg text-[#00568C] font-lazydog">
+                <a href="#" class="hover:text-[#04C4B6]">ABOUT US</a>
+                <a href="vission.html" class="hover:text-[#04C4B6]">OUR VISION</a>
+                <a href="#" class="hover:text-[#04C4B6]">OUR MISSION</a>
+            </div>
+
+            <!-- Center logo (absolute) -->
+            <div class="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                <a href="/index.html">
+                    <img src="assets/svg/appLogo.svg" alt="Youth Vest Logo"
+                        class="w-36 h-28 rounded-full border-white" />
+                </a>
+            </div>
+
+            <!-- Right navigation -->
+            <div class="flex items-center gap-8 text-lg font-medium text-[#00568C] font-lazydog">
+                <div class="relative group cursor-pointer">
+                    <span class="hover:text-[#04C4B6] flex items-center gap-1">
+                        JOIN US
+                        <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd"
+                                d="M5.23 7.21a.75.75 0 011.06.02L10 11.293l3.71-4.06a.75.75 0 111.08 1.04l-4.25 4.65a.75.75 0 01-1.08 0L5.21 8.27a.75.75 0 01.02-1.06z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </span>
+                </div>
+                <a href="#" class="hover:text-[#04C4B6]">DONATE</a>
+                <a href="#" class="hover:text-[#04C4B6]">CONTACT US</a>
+            </div>
+        </nav>
+
+        <!-- Hamburger Icon (Mobile Only) -->
+        <button id="menuBtn" class="lg:hidden focus:outline-none z-50 p-6">
+            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
+                </path>
+            </svg>
+        </button>
+
+        <!-- Sidebar Menu (Mobile) -->
+        <div id="mobileMenu"
+            class="fixed top-0 right-0 h-full w-64 bg-white text-[#00568C] transform translate-x-full transition-transform duration-300 ease-in-out shadow-lg z-40 font-lazydog">
+            <div class="p-6 flex flex-col gap-6 text-lg">
+                <button id="closeBtn" class="self-end mb-6">
+                    <svg class="w-6 h-6 text-[#00568C]" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
+                        </path>
+                    </svg>
+                </button>
+                <a href="#" class="hover:text-[#04C4B6]">ABOUT US</a>
+                <a href="vission.html" class="hover:text-[#04C4B6]">OUR VISION</a>
+                <a href="#" class="hover:text-[#04C4B6]">OUR MISSION</a>
+                <a href="#" class="hover:text-[#04C4B6]">JOIN US</a>
+                <a href="#" class="hover:text-[#04C4B6]">DONATE</a>
+                <a href="#" class="hover:text-[#04C4B6]">CONTACT US</a>
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <!-- What is Section-->
+    <section class="bg-[#00568C] text-center pt-[50px] ">
+        <h2 class="text-3xl mb-10 hidden md:flex items-center justify-center gap-2 font-wedges text-white">
+            <span><img src="assets/svg/left.svg" alt="icon" class="w-6 h-10 md:relative top-[-20px] left-[12px]"></span>
+            What is Youth <span class="text-[#25CE9E]">in</span>-vest?<span>
+                <img src="assets/svg/right.svg" alt="decor"
+                    class="w-6 h-10 md:relative top-[-17px] left-[-10px]"></span>
+        </h2>
+        <h2 class="text-3xl mb-10 mx-2 md:hidden items-center justify-center  font-wedges text-white">
+            <span><img src="assets/svg/left.svg" alt="icon" class="w-6 h-10 relative top-[20px] left-[-10px]"></span>
+            What is Youth <span class="text-[#25CE9E]">in</span>-vest?<span>
+
+        </h2>
+        <div>
+            <img src="assets/svg/bookIcon.svg"
+                class="absolute h-14 md:h-20 bottom-[-520px] md:bottom-[-400px] lg:bottom-[-600px] xl:bottom-[-360px] right-[30px] md:right-[50px]">
+            <img src="assets/svg/settingIcon.svg" class="absolute right-[1px] md:right-[30px] xl:right-[220px] h-10 md:h-20">
+            <img src="assets/svg/stationaryIcon.svg"
+                class="absolute h-14 md:h-24 bottom-[-500px] md:bottom-[-400px] lg:bottom-[-550px] xl:bottom-[-350px] left-[40px] lg:left-[180px]">
+            <img src="assets/svg/curveLine.svg"
+                class="absolute h-[200px] md:h-[250px] bottom-[-470px]  md:bottom-[-330px] lg:bottom-[-530px]  xl:bottom-[-290px] right-[10px] md:right-[40px]">
+
+        </div>
+
+        <div class="flex justify-center mt-10">
+            <img src="/assets/png/homeBannerLayer1.png" class="h-[250px] md:h-[350px] lg:h-[500px] z-10">
+            <img src="assets/png/homeBannerLayer2.png"
+                class="h-[160px]  md:h-[230px] lg:h-[300px] absolute bottom-[40px] md:bottom-[10px] lg:bottom-[-140px] xl:bottom-[-20px] left-[-10px] md:left-[150px] xl:left-[400px]">
+        </div>
+        <div class="mt-20">
+            <p
+                class="text-white font-lazydog uppercase text-lg md:text-3xl mx-[60px] md:mx-[100px] lg:mx-[300px]  pb-20">
+                youth
+                In-Vest is a
+                nonprofit that helps kids learn how to save, spend, and grow money. Through
+                funworkshops and activities, we teach personal financial literacy and the basics of investing in away
+                that’s easy to understand. We want kids to start investing early and prepare for theirfuture with
+                confidence.</p>
+        </div>
+    </section>
+
+    <!--Make Difference-->
+
+    <section style="background: linear-gradient(100.15deg, #38B6FF 1.52%, #226D99 109.26%);
+" class=" py-16 px-6 md:px-12">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+
+            <!-- LEFT SIDE -->
+            <div class="text-center md:text-left">
+                <h1 class="font-wedges text-white text-4xl md:text-5xl  flex  gap-3 justify-center md:justify-start">
+                    <span><img src="assets/svg/left.svg" alt="icon"
+                            class="w-14  lg:w-10 h-24 relative top-[-40px] left-[70px]  md:left-[10px] lg:left-[15px]"></span>
+                    DO YOU WANT <br class="hidden md:block"> TO MAKE A<br class="hidden md:block"> DIFFERENCE?
+                </h1>
+            </div>
+
+            <!-- RIGHT SIDE -->
+            <div class="flex flex-col gap-10 text-white">
+
+                <div>
+                    <h2 class="font-wedges text-2xl md:text-3xl flex items-center gap-2">
+                        <span><img src="assets/svg/left.svg" alt="icon"
+                                class="w-6 md:w-10 h-10 relative top-[-25px] lg:top-[-20px] left-[5px] lg:left-[12px]"></span>
+                        WHY JOIN OUR
+                        COMMUNITY?
+                        <img src="assets/svg/right.svg" alt="decor"
+                            class="w-6 h-6 hidden xl:block relative md:top-[-17px] left-[-165px] md:left-[-10px]">
+                    </h2>
+                    <p class="pl-[25px] md:pl-0 mt-3 text-sm md:text-base leading-relaxed font-lazydog uppercase">
+                        At Youth In-Vest, joining our community means more than attending events.
+                        It’s about growing together. Students gain real-world financial and leadership
+                        skills while parents can trust that their children are building confidence,
+                        independence, and a strong foundation for the future.
+                    </p>
+                    <button style="box-shadow: 8px 8px 30px 0px #0076F626;"
+                        class="ml-[25px] md:ml-0 mt-4 bg-[#00568C] bg-[url('/assets/png/buttonBg.png')] bg-cover bg-center font-lazydog uppercase text-white px-6 py-2 rounded-full flex items-center gap-20 md:gap-40  transition">
+                        JOIN US
+                        <img src="assets/svg/buttonArrow.svg" class="h-5">
+                    </button>
+
+                </div>
+
+                <div>
+                    <h2 class="font-wedges text-2xl md:text-3xl flex items-center gap-2">
+                        <span><img src="assets/svg/left.svg" alt="icon"
+                                class="w-6 md:w-10 h-10  relative top-[-25px] md:top-[-20px] left-[5px] lg:left-[12px]"></span>
+                        DO U WANNA BE
+                        ON OUR TEAM?
+                        <img src="assets/svg/right.svg" alt="decor"
+                            class="w-6 h-6 hidden xl:block relative md:top-[-17px] left-[-250px] md:left-[-10px]">
+                    </h2>
+                    <p class="pl-[25px] md:pl-0 mt-3 text-sm md:text-base leading-relaxed font-lazydog uppercase">
+                        All high schoolers… ready to make a difference? Join us to gain valuable experience,
+                        boost your college applications, and help empower young people with financial knowledge
+                        that can change their lives.
+                    </p>
+                    <button style="box-shadow: 8px 8px 30px 0px #0076F626;"
+                        class="ml-[25px] md:ml-0 mt-4 bg-[#00568C] bg-[url('/assets/png/buttonBg.png')] bg-cover bg-center font-lazydog uppercase text-white px-6 py-2 rounded-full flex items-center gap-20 md:gap-40  transition">
+                        APPLY
+                        <img src="assets/svg/buttonArrow.svg" class="h-5">
+                    </button>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- Container -->
+    <div class="bg-[#00568C] min-h-screen px-6 py-[90px] text-white font-sans relative ">
+        <div
+            class="absolute inset-0 bg-[url('/assets/png/line_BG.png')] bg-no-repeat bg-bottom bg-contain opacity-20 pointer-events-none">
+        </div>
+
+        <div>
+            <img src="/assets/svg/musicHomePage.svg"
+                class="h-14 md:h-20  absolute left-[10px] xl:left-[190px] top-[10px] md:top-[20px]">
+            <img src="/assets/svg/lightningHomePage.svg"
+                class=" h-14 md:h-20 absolute right-[30px] xl:right-[190px] top-[10px] md:top-[20px]">
+            <img src="/assets/svg/knotHomePage.svg"
+                class="h-[200px] hidden  lg:block absolute top-[600px] lg:top-[400px] left-[100px]">
+            <img src="/assets/svg/lightHomePage.svg"
+                class="h-14 md:h-24 absolute top-[680px] md:top-[730px] lg:top-[630px] xl:top-[580px] left-[10px] xl:left-[160px]">
+            <img src="/assets/svg/designHomePage.svg"
+                class="h-14 md:h-24 absolute top-[670px]  md:top-[730px] lg:top-[690px] xl:top-[610px] right-[40px] lg:right-[200px]">
+            <img src="/assets/svg/mHomePage.svg"
+                class="h-10 absolute top-[670px] md:top-[730px] lg:top-[690px] xl:top-[640px] right-[90px] md:right-[120px] lg:right-[280px]">
+
+
+        </div>
+        <!-- Mailing List Section -->
+        <div class=" max-w-3xl lg:max-w-3xl xl:max-w-5xl mx-auto relative mb-24">
+            <div style="background: linear-gradient(0deg, #0A0A0B, #0A0A0B),
+               linear-gradient(0deg, rgba(0, 0, 0, 0.28), rgba(0, 0, 0, 0.28));
+               " class=" rounded-3xl p-8 md:p-12 relative overflow-hidden shadow-xl">
+                <div class="absolute inset-0 opacity-90 bg-[url('/assets/png/mailListBg.png')] bg-cover bg-center">
+                </div>
+
+                <!-- surrounded icons-->
+
+
+                <div class="bg-[#000000] py-6 my-[40px] rounded-3xl opacity-70">
+                    <div class="relative z-10 text-center ">
+                        <h2
+                            class="text-2xl md:text-3xl text-[#72CCD8] font-wedges flex items-center justify-center gap-2">
+                            <span><img src="assets/svg/left.svg" alt="icon"
+                                    class="w-10 h-20 relative top-[-30px] md:top-[-20px] left-[35px] md:left-[15px]"></span>
+                            JOIN OUR MAILING LIST
+                        </h2>
+                        <p
+                            class="text-sm md:text-2xl uppercase font-lazydog mb-2 px-[30px] md:px-[150px] text-center flex">
+                            Don’t miss out! Join our mailing list to receive the latest news, program updates, event
+                            details,
+                            and opportunities from Youth In-Vest.
+                        </p>
+                        <div class="flex flex-col mx-[40px] md:mx-0 gap-4 mb-2 justify-center">
+                            <input type="email" placeholder="Enter your email"
+                                class="flex-1 px-4 py-3  font-lazydog rounded-lg text-[#FFFFFF] font-bold bg-transparent focus:outline-none max-w-md border-[#72CCD8] border-2" />
+                            <button
+                                class="px-6 py-3 bg-[#72CCD8] text-black rounded-full font-lazydog uppercase hover:bg-[#56c6bb] transition flex items-center justify-center gap-2">
+                                Subscribe <img src="assets/svg/blackArrow.svg" class="h-5">
+
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+        <!-- Apply Section -->
+        <div class="max-w-6xl mx-auto text-center mb-24">
+            <h2 class="text-3xl mb-10 flex items-center justify-center gap-2 font-wedges">
+                <span><img src="assets/svg/left.svg" alt="icon"
+                        class="w-10 h-20 relative top-[-30px] md:top-[-20px] left-[30px] md:left-[15px]"></span> APPLY
+                TO BE ON OUR TEAM <span>
+                    <img src="assets/svg/right.svg" alt="decor"
+                        class="w-10 hidden md:block h-20 relative top-[4px] md:top-[-17px] left-[-80px] md:left-[-10px]"></span>
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div
+                    class="relative bg-[url('assets/png/blueBg.png')] bg-cover bg-center h-24 md:h-32 lg:h-28 xl:h-36 flex items-center justify-around ">
+                    <h1 class=" text-white font-wedges text-xl  leading-relaxed mx-2 md:mx-0 text-left">Marketing
+                        <br>Team
+                    </h1>
+                    <img src="assets/svg/marketingHomePage.svg">
+                </div>
+
+                <div
+                    class="relative bg-[url('assets/png/blueBg.png')] bg-cover bg-center h-24 md:h-32  lg:h-28 xl:h-36 flex items-center justify-around ">
+                    <h1 class=" text-white font-wedges text-xl  leading-relaxed mx-4 md:mx-0 text-left">Program<br>
+                        Management<br>
+                        Team</h1>
+                    <img src="assets/svg/programHomePage.svg">
+                </div>
+                <div
+                    class="relative bg-[url('assets/png/blueBg.png')] bg-cover bg-center h-24 md:h-32  lg:h-28 xl:h-36 flex items-center justify-around ">
+                    <h1 class=" text-white font-wedges text-xl  leading-relaxed mx-4 md:mx-0 text-left">Finance <br>Team
+                    </h1>
+                    <img src="assets/svg/financeHomePage.svg">
+                </div>
+                <div
+                    class="relative bg-[url('assets/png/blueBg.png')] bg-cover bg-center h-24 md:h-32  lg:h-28 xl:h-36 flex items-center justify-around ">
+                    <h1 class=" text-white font-wedges text-xl  leading-relaxed mx-4 md:mx-0 text-left">Research &<br>
+                        Writing Team
+                    </h1>
+                    <img src="assets/svg/researchHomePage.svg">
+                </div>
+                <div
+                    class="relative bg-[url('assets/png/blueBg.png')] bg-cover bg-center h-24 md:h-32  lg:h-28 xl:h-36 flex items-center justify-around ">
+                    <h1 class=" text-white font-wedges text-xl  leading-relaxed mx-4 md:mx-0 text-left">TECH <br>Team
+                    </h1>
+                    <img src="assets/svg/techHomePage.svg">
+                </div>
+                <div
+                    class="relative bg-[url('assets/png/greenBg.png')] bg-cover bg-center h-24 md:h-32  lg:h-28 xl:h-36 flex items-center justify-evenly ">
+                    <h1 class=" text-black font-lazydog text-4xl  leading-relaxed text-left">APPLY NOW</h1>
+                    <img src="assets/svg/blackArrow.svg" class="h-8">
+                </div>
+            </div>
+        </div>
+
+        <!-- Testimonials Section -->
+        <div class="max-w-5xl mx-auto text-center mb-40 ">
+            <h2 class="text-3xl  mb-10 flex items-center justify-center gap-2 uppercase font-wedges">
+                <span><img src="assets/svg/left.svg" alt="icon"
+                        class="w-10 h-20 relative top-[-20px] left-[15px]"></span> Testimonials <span> <img
+                        src="assets/svg/right.svg" alt="decor"
+                        class="w-10 h-20 relative top-[-18px] md:top-[-17px] left-[-10px]"></span>
+            </h2>
+            <div class=" p-8  mx-auto">
+
+                <div class="flex justify-center items-center mb-[50px] md:mb-0">
+                    <img src="assets/png/userProfile.png" class="rounded-full border-2 border-white" />
+
+                </div>
+                <div class="absolute px-[400px] mt-[5px]">
+                    <img src="assets/svg/testimonialIcon.svg" class=" ">
+
+                </div>
+                <p class="text-sm md:text-base uppercase font-lazydog px-0 lg:px-[100px] xl:px-0">
+                    "As a young investor, I always thought investing was complicated and only for experienced people.
+                    But
+                    once I started learning the basics and applying them step by step, I realized how powerful it is to
+                    start early. Even with small amounts, I’ve seen my money grow, and it has given me confidence about
+                    my financial future. Investing young has taught me discipline, patience, and the importance of
+                    thinking long-term.”
+                </p>
+                <div class="mt-6 flex flex-col items-center">
+                    <span class="mt-2  text-lg font-lazydog text-[#04C4B6]">John Doe</span>
+                    <span class="text-md font-lazydog">Digital Marketing Manager</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Floating Donate Section -->
+        <div class="relative max-w-6xl mx-auto">
+
+            <div>
+                <img src="assets/svg/starHomePage.svg" class="h-[100px] lg:h-auto absolute -top-[230px] -left-[30px]">
+                <img src="assets/svg/rocketHomePage.svg"
+                    class="h-10 lg:h-24 absolute -top-[230px]  lg:-top-[540px] xl:-top-[580px] right-[0px]  xl:-right-[100px]">
+                <img src="assets/svg/knotHomePage.svg"
+                    class="h-[100px] lg:h-auto absolute -top-[220px] lg:-top-[520px] xl:-top-[560px] right-[20px]  xl:-right-[30px]"
+                    style="transform: rotate(-120deg);">
+
+            </div>
+            <div
+                class="absolute -top-20 left-1/2 transform -translate-x-1/2 w-full lg:w-4/5 bg-[#72CCD8]  p-10 flex flex-col md:flex-row items-center justify-between gap-8 shadow-2xl">
+                <div class="text-center md:text-left">
+                    <h2 class="text-2xl md:text-2xl pr-0 md:pr-[250px]  lg:pr-[300px] xl:pr-0 font-wedges text-[#00568C] mb-4 flex">
+                        <span><img src="assets/svg/left.svg" alt="icon"
+                                class="w-10 h-20 relative top-[-41px] left-[15px] md:left-[2px]"></span> DONATE TODAY
+                        AND BE A PART
+                        OF <br /> BUILDING A BRIGHTER FUTURE.
+                    </h2>
+                    <button style=" box-shadow: 8px 8px 30px 0px #0076F626;"
+                        class="mt-4 md:ml-[30px] bg-[#00568C] bg-[url('/assets/png/buttonBg.png')] bg-cover bg-center font-lazydog uppercase text-white px-6 py-2 rounded-full flex items-center gap-40 md:gap-40  transition">
+                        APPLY
+                        <img src="assets/svg/buttonArrow.svg" class="h-5">
+                    </button>
+                </div>
+                <div class="">
+                    <img src="assets/png/donate.png"
+                        class=" md:w-[380px]  xl:w-[450px] hidden md:block absolute right-[-20px] bottom-0 md:bottom-[30px] xl:bottom-0 " />
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="w-full py-10 text-white "
+        style="background: linear-gradient(102.7deg, #38B6FF 1.57%, #226D99 88.2%);">
+        <div
+            class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-20 md:gap-[80px] lg:gap-20 justify-center align-center mt-[100px]">
+
+            <!-- Left: Logo -->
+            <div class="flex  justify-center md:justify-end">
+                <img src="assets/svg/appLogo.svg" alt="Youth Invest Logo" class="w-28 h-28 object-contain">
+            </div>
+
+            <!-- Middle: Quick Links -->
+            <div class="text-center md:text-left">
+                <h3 class="uppercase  mb-4 tracking-wide font-lazydog">Quick Links</h3>
+                <div class="grid grid-cols-3 gap-x-1 md:gap-x-10 lg:gap-x-1 gap-y-6 text-sm">
+                    <div class="flex items-start lg:items-center gap-2 font-lazydog uppercase">
+                        <img src="assets/svg/checkCircle.svg" class="w-3 h-3"> <span>About Us</span>
+                    </div>
+                    <div class="flex items-start lg:items-center gap-2 font-lazydog uppercase">
+                        <img src="assets/svg/checkCircle.svg" class="w-3 h-3"> <span>Our Vision</span>
+                    </div>
+                    <div class="flex items-start lg:items-center gap-2 font-lazydog uppercase">
+                        <img src="assets/svg/checkCircle.svg" class="w-3 h-3"> <span>Join Us</span>
+                    </div>
+                    <div class="flex items-start lg:items-center gap-2 font-lazydog uppercase">
+                        <img src="assets/svg/checkCircle.svg" class="w-3 h-3"> <span class="sm:text-left">Our
+                            Mission</span>
+                    </div>
+                    <div class="flex items-start lg:items-center gap-2 font-lazydog uppercase">
+                        <img src="assets/svg/checkCircle.svg" class="w-3 h-3"> <span>Donate</span>
+                    </div>
+                    <div class="flex items-start lg:items-center gap-2 font-lazydog uppercase">
+                        <img src="assets/svg/checkCircle.svg" class="w-3 h-3"> <span class="sm:text-left">Contact
+                            Us</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right: Contact Us -->
+            <div class="text-center md:text-left">
+                <h3 class=" mb-4 tracking-wide font-lazydog uppercase">Contact Us</h3>
+                <div class="space-y-2 text-sm">
+                    <div class="flex items-center justify-center md:justify-start gap-2 font-lazydog">
+                        <img src="assets/svg/phone.svg" class="w-4 h-4"> <span class="text-lg">+123 456 7890</span>
+                    </div>
+                    <div class="flex items-center justify-center md:justify-start gap-2 font-lazydog ">
+                        <img src="assets/svg/mail.svg" class="w-4 h-4 font-lazydog "> <span
+                            class="text-lg">info@youthinvest.com</span>
+                    </div>
+                </div>
+
+                <!-- Social Icons -->
+                <div class="flex justify-center md:justify-start gap-4 mt-4">
+                    <a href="#"><img src="assets/svg/social1.svg" class="w-5 h-5"></a>
+                    <a href="#"><img src="assets/svg/social2.svg" class="w-5 h-5"></a>
+                    <a href="#"><img src="assets/svg/social3.svg" class="w-5 h-5"></a>
+                    <a href="#"><img src="assets/svg/social4.svg" class="w-5 h-5"></a>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+    <div>
+        <div class="text-center pt-5 font-lazydog uppercase pb-5 text-xl  text-[#00568C] bg-[#72CCD8]">
+            © 2025 Copyright youth InVest. All Rights Reserved
+        </div>
+    </div>
+    <script>
+        const menuBtn = document.getElementById('menuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const closeBtn = document.getElementById('closeBtn');
+        // console.log("CLOSE BTN ", closeBtn)
+        menuBtn.addEventListener('click', () => {
+            // console.log("MENY BTN clicked ✅");
+            if (mobileMenu.classList.contains("translate-x-full"))
+                mobileMenu.classList.remove('translate-x-full');
+            else
+                mobileMenu.classList.add('translate-x-full');
+        });
+    </script>
+</body>
+
+</html>
