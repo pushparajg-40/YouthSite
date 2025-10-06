@@ -14,10 +14,13 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
 
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
     <title>Contact Us</title>
 
     <script>
-        emailjs.init("qiHx1-IR1OVRtl3Bt");
+        emailjs.init("Cr4AdzrgWBrjzXPjH");
 
         document.addEventListener("DOMContentLoaded", function () {
             const contactForm = document.getElementById("contactForm");
@@ -46,9 +49,9 @@
                 const name = document.getElementById("name").value;
                 const email = document.getElementById("email").value;
                 const message = document.getElementById("message").value;
-                const mobile = document.getElementById("mobile").value;
+                // const mobile = document.getElementById("mobile").value;
 
-                if (!name || !email || !message || !mobile) {
+                if (!name || !email || !message ) {
                     showStatusMessage(
                         "error",
                         "Please fill in all required fields and accept the terms."
@@ -73,7 +76,7 @@
 
                 // Send email using EmailJS
                 emailjs
-                    .send("service_wrnd508", "template_zwfzmhh", templateParams) // Replace with your actual IDs
+                    .send("service_kvvw26k", "template_vtyyphm", templateParams) // Replace with your actual IDs
                     .then(
                         function (response) {
                             // Success
@@ -123,83 +126,85 @@
 
 <body>
 
-  
+
     <div class="bg-[url('assets/png/vissionBanner.png')] bg-cover bg-center  h-[400px]">
-       
-           <!-- Navbar Container -->
-    <div class=" flex justify-between items-center py-[20px] px-2 md:px-0 lg:px-4 lg:justify-center relative">
 
-        <!-- Logo (for mobile) -->
-        <a href="/index.html" class="lg:hidden">
-            <img src="assets/svg/appLogo.svg" alt="Youth Vest Logo" class="w-24 h-20" />
-        </a>
+        <!-- Navbar Container -->
+        <div class=" flex justify-between items-center py-[20px] px-2 md:px-0 lg:px-4 lg:justify-center relative">
 
-        <!-- Desktop Navbar -->
-        <nav
-            class="relative bg-white px-8 py-4 rounded-full hidden lg:flex items-center justify-between w-[90%] max-w-5xl shadow-lg">
+            <!-- Logo (for mobile) -->
+            <a href="/index.html" class="lg:hidden">
+                <img src="assets/svg/appLogo.svg" alt="Youth Vest Logo" class="w-24 h-20" />
+            </a>
 
-            <!-- Left navigation -->
-            <div class="flex items-center gap-2 lg:gap-8 text-lg text-[#00568C] font-lazydog">
-                <a href="#" class="hover:text-[#04C4B6]">ABOUT US</a>
-                <a href="vission.html" class="hover:text-[#04C4B6]">OUR VISION</a>
-                <a href="#" class="hover:text-[#04C4B6]">OUR MISSION</a>
-            </div>
+            <!-- Desktop Navbar -->
+            <nav
+                class="relative bg-white px-8 py-4 rounded-full hidden lg:flex items-center justify-between w-[90%] max-w-5xl shadow-lg">
 
-            <!-- Center logo (absolute) -->
-            <div class="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                <a href="/index.html">
-                    <img src="assets/svg/appLogo.svg" alt="Youth Vest Logo"
-                        class="w-36 h-28 rounded-full border-white" />
-                </a>
-            </div>
-
-            <!-- Right navigation -->
-            <div class="flex items-center gap-8 text-lg font-medium text-[#00568C] font-lazydog">
-                <div class="relative group cursor-pointer">
-                    <span class="hover:text-[#04C4B6] flex items-center gap-1">
-                        JOIN US
-                        <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd"
-                                d="M5.23 7.21a.75.75 0 011.06.02L10 11.293l3.71-4.06a.75.75 0 111.08 1.04l-4.25 4.65a.75.75 0 01-1.08 0L5.21 8.27a.75.75 0 01.02-1.06z"
-                                clip-rule="evenodd" />
-                        </svg>
-                    </span>
+                <!-- Left navigation -->
+                <div class="flex items-center gap-2 lg:gap-8 text-lg text-[#00568C] font-lazydog">
+                    <a href="#" class="hover:text-[#04C4B6]">ABOUT US</a>
+                    <a href="vission.html" class="hover:text-[#04C4B6]">OUR VISION</a>
+                    <a href="#" class="hover:text-[#04C4B6]">OUR MISSION</a>
                 </div>
-                <a href="#" class="hover:text-[#04C4B6]">DONATE</a>
-                <a href="#" class="hover:text-[#04C4B6]">CONTACT US</a>
-            </div>
-        </nav>
 
-        <!-- Hamburger Icon (Mobile Only) -->
-        <button id="menuBtn" class="lg:hidden focus:outline-none z-50 p-6">
-            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
-                </path>
-            </svg>
-        </button>
+                <!-- Center logo (absolute) -->
+                <div class="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                    <a href="/index.html">
+                        <img src="assets/svg/appLogo.svg" alt="Youth Vest Logo"
+                            class="w-36 h-28 rounded-full border-white" />
+                    </a>
+                </div>
 
-        <!-- Sidebar Menu (Mobile) -->
-        <div id="mobileMenu"
-            class="fixed top-0 right-0 h-full w-64 bg-white text-[#00568C] transform translate-x-full transition-transform duration-300 ease-in-out shadow-lg z-40 font-lazydog">
-            <div class="p-6 flex flex-col gap-6 text-lg">
-                <button id="closeBtn" class="self-end mb-6">
-                    <svg class="w-6 h-6 text-[#00568C]" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
-                        </path>
-                    </svg>
-                </button>
-                <a href="#" class="hover:text-[#04C4B6]">ABOUT US</a>
-                <a href="vission.html" class="hover:text-[#04C4B6]">OUR VISION</a>
-                <a href="#" class="hover:text-[#04C4B6]">OUR MISSION</a>
-                <a href="#" class="hover:text-[#04C4B6]">JOIN US</a>
-                <a href="#" class="hover:text-[#04C4B6]">DONATE</a>
-                <a href="#" class="hover:text-[#04C4B6]">CONTACT US</a>
+                <!-- Right navigation -->
+                <div class="flex items-center gap-8 text-lg font-medium text-[#00568C] font-lazydog">
+                    <div class="relative group cursor-pointer">
+                        <span class="hover:text-[#04C4B6] flex items-center gap-1">
+                            JOIN US
+                            <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M5.23 7.21a.75.75 0 011.06.02L10 11.293l3.71-4.06a.75.75 0 111.08 1.04l-4.25 4.65a.75.75 0 01-1.08 0L5.21 8.27a.75.75 0 01.02-1.06z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                        </span>
+                    </div>
+                    <a href="#" class="hover:text-[#04C4B6]">DONATE</a>
+                    <a href="contactUs.html" class="hover:text-[#04C4B6]">CONTACT US</a>
+                </div>
+            </nav>
+
+            <!-- Hamburger Icon (Mobile Only) -->
+            <button id="menuBtn" class="lg:hidden focus:outline-none z-50 p-6">
+                <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
+                    </path>
+                </svg>
+            </button>
+
+            <!-- Sidebar Menu (Mobile) -->
+            <div id="mobileMenu"
+                class="fixed top-0 right-0 h-full w-64 bg-white text-[#00568C] transform translate-x-full transition-transform duration-300 ease-in-out shadow-lg z-40 font-lazydog">
+                <div class="p-6 flex flex-col gap-6 text-lg">
+                    <button id="closeBtn" class="self-end mb-6">
+                        <svg class="w-6 h-6 text-[#00568C]" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M6 18L18 6M6 6l12 12">
+                            </path>
+                        </svg>
+                    </button>
+                    <a href="#" class="hover:text-[#04C4B6]">ABOUT US</a>
+                    <a href="vission.html" class="hover:text-[#04C4B6]">OUR VISION</a>
+                    <a href="#" class="hover:text-[#04C4B6]">OUR MISSION</a>
+                    <a href="#" class="hover:text-[#04C4B6]">JOIN US</a>
+                    <a href="#" class="hover:text-[#04C4B6]">DONATE</a>
+                    <a href="contactUs.html" class="hover:text-[#04C4B6]">CONTACT US</a>
+                </div>
             </div>
+
         </div>
-
-    </div> <h2 class="text-4xl mb-10 flex items-center justify-center gap-2 font-wedges text-white py-[100px]">
+        <h2 class="text-4xl mb-10 flex items-center justify-center gap-2 font-wedges text-white py-[100px]">
             <span><img src="assets/svg/left.svg" alt="icon" class="w-6 h-10 md:relative top-[-20px] left-[12px]"></span>
             Contact Us<span>
                 <img src="assets/svg/right.svg" alt="decor"
@@ -224,6 +229,7 @@
         <!-- Main Content -->
         <div class="relative mb-[300px] z-10 flex justify-center px-4">
             <div class="w-full max-w-3xl bg-[url('/assets/png/contactBg.png')] bg-cover bg-center bg-no-repeat p-10 ">
+                <div id="statusMessage" class="hidden"></div>
 
                 <h2 class="text-4xl mb-10 flex items-center justify-center gap-2 font-wedges text-white pt-[20px]">
                     <span><img src="assets/svg/left.svg" alt="icon"
@@ -257,7 +263,7 @@
 
                     <!-- Submit Button -->
                     <div class="flex justify-center">
-                        <button type="submit" style="box-shadow: 8px 8px 30px 0px #0076F626;"
+                        <button type="submit" style="box-shadow: 8px 8px 30px 0px #0076F626;" id="submitBtn" name="submitBtn"
                             class="mt-4 bg-[#00568C] bg-[url('/assets/png/buttonBg.png')] bg-cover bg-center uppercase text-white px-6 py-2 rounded-full flex items-center gap-40 transition">
                             Submit
                             <img src="assets/svg/buttonArrow.svg" class="h-5">
@@ -328,37 +334,42 @@
     </div>
 
     <!-- Footer Section -->
+    <!-- Footer Section -->
     <footer class="w-full py-10 text-white "
         style="background: linear-gradient(102.7deg, #38B6FF 1.57%, #226D99 88.2%);">
         <div
-            class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-20 justify-center align-center mt-[100px]">
+            class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-20 md:gap-[80px] lg:gap-20 justify-center align-center mt-[100px]">
 
             <!-- Left: Logo -->
-            <div class="flex  justify-end">
+            <div class="flex  justify-center md:justify-end">
                 <img src="assets/svg/appLogo.svg" alt="Youth Invest Logo" class="w-28 h-28 object-contain">
             </div>
 
             <!-- Middle: Quick Links -->
             <div class="text-center md:text-left">
                 <h3 class="uppercase  mb-4 tracking-wide font-lazydog">Quick Links</h3>
-                <div class="grid grid-cols-3 gap-x-1 gap-y-6 text-sm">
-                    <div class="flex items-center gap-2 font-lazydog uppercase">
+                <div class="grid grid-cols-3 gap-x-1 md:gap-x-10 lg:gap-x-1 gap-y-6 text-sm">
+                    <div class="flex items-start lg:items-center gap-2 font-lazydog uppercase">
                         <img src="assets/svg/checkCircle.svg" class="w-3 h-3"> <span>About Us</span>
                     </div>
-                    <div class="flex items-center gap-2 font-lazydog uppercase">
-                        <img src="assets/svg/checkCircle.svg" class="w-3 h-3"> <span>Our Vision</span>
+                    <div class="flex items-start lg:items-center gap-2 font-lazydog uppercase">
+                        <a href="vission.html">
+                            <img src="assets/svg/checkCircle.svg" class="w-3 h-3"> <span>Our Vision</span></a>
                     </div>
-                    <div class="flex items-center gap-2 font-lazydog uppercase">
+                    <div class="flex items-start lg:items-center gap-2 font-lazydog uppercase">
                         <img src="assets/svg/checkCircle.svg" class="w-3 h-3"> <span>Join Us</span>
                     </div>
-                    <div class="flex items-center gap-2 font-lazydog uppercase">
-                        <img src="assets/svg/checkCircle.svg" class="w-3 h-3"> <span>Our Mission</span>
+                    <div class="flex items-start lg:items-center gap-2 font-lazydog uppercase">
+                        <img src="assets/svg/checkCircle.svg" class="w-3 h-3"> <span class="sm:text-left">Our
+                            Mission</span>
                     </div>
-                    <div class="flex items-center gap-2 font-lazydog uppercase">
+                    <div class="flex items-start lg:items-center gap-2 font-lazydog uppercase">
                         <img src="assets/svg/checkCircle.svg" class="w-3 h-3"> <span>Donate</span>
                     </div>
-                    <div class="flex items-center gap-2 font-lazydog uppercase">
-                        <img src="assets/svg/checkCircle.svg" class="w-3 h-3"> <span>Contact Us</span>
+                    <div class="flex items-start lg:items-center gap-2 font-lazydog uppercase">
+                        <a href="contactUs.html">
+                            <img src="assets/svg/checkCircle.svg" class="w-3 h-3"> <span class="sm:text-left">Contact
+                                Us</span></a>
                     </div>
                 </div>
             </div>
@@ -392,7 +403,7 @@
             © 2025 Copyright youth InVest. All Rights Reserved
         </div>
     </div>
- <script>
+    <script>
         const menuBtn = document.getElementById('menuBtn');
         const mobileMenu = document.getElementById('mobileMenu');
         const closeBtn = document.getElementById('closeBtn');
