@@ -15,6 +15,29 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
 
     <title>Home</title>
+      <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const btn = document.getElementById('joinDropdownBtn');
+            const menu = document.getElementById('joinDropdown');
+
+            // Toggle dropdown
+            btn.addEventListener('click', function (e) {
+                e.stopPropagation();
+                const isOpen = btn.getAttribute('aria-expanded') === 'true';
+                btn.setAttribute('aria-expanded', String(!isOpen));
+                menu.classList.toggle('hidden');
+            });
+
+            // Close when clicking outside
+            document.addEventListener('click', function (e) {
+                if (!btn.contains(e.target) && !menu.contains(e.target)) {
+                    menu.classList.add('hidden');
+                    btn.setAttribute('aria-expanded', 'false');
+                }
+            });
+
+        });
+    </script>
 </head>
 
 <body>
@@ -34,9 +57,9 @@
 
             <!-- Left navigation -->
             <div class="flex items-center gap-2 lg:gap-8 text-lg text-[#00568C] font-lazydog">
-                <a href="#" class="hover:text-[#04C4B6]">ABOUT US</a>
+                <a href="about-us.html" class="hover:text-[#04C4B6]">ABOUT US</a>
                 <a href="vission.html" class="hover:text-[#04C4B6]">OUR VISION</a>
-                <a href="#" class="hover:text-[#04C4B6]">OUR MISSION</a>
+                <a href="mission.html" class="hover:text-[#04C4B6]">OUR MISSION</a>
             </div>
 
             <!-- Center logo (absolute) -->
@@ -50,14 +73,51 @@
             <!-- Right navigation -->
             <div class="flex items-center gap-8 text-lg font-medium text-[#00568C] font-lazydog">
                 <div class="relative group cursor-pointer">
-                    <span class="hover:text-[#04C4B6] flex items-center gap-1">
+                    <!-- <span class="hover:text-[#04C4B6] flex items-center gap-1">
                         JOIN US
                         <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
                             <path fill-rule="evenodd"
                                 d="M5.23 7.21a.75.75 0 011.06.02L10 11.293l3.71-4.06a.75.75 0 111.08 1.04l-4.25 4.65a.75.75 0 01-1.08 0L5.21 8.27a.75.75 0 01.02-1.06z"
                                 clip-rule="evenodd" />
                         </svg>
-                    </span>
+                    </span> -->
+                           <div class="flex items-center gap-1">
+                            <!-- Main link -->
+                            <a href="/join-us.html" class="hover:text-[#04C4B6] transition-colors duration-200">
+                                JOIN&nbsp;US
+                            </a>
+
+                            <!-- Dropdown toggle button -->
+                            <button id="joinDropdownBtn" class="focus:outline-none">
+                                <svg class="w-4 h-4 text-[#005C81] hover:text-[#04C4B6]" fill="currentColor"
+                                    viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd"
+                                        d="M5.23 7.21a.75.75 0 011.06.02L10 11.293l3.71-4.06a.75.75 0 111.08 1.04l-4.25 4.65a.75.75 0 01-1.08 0L5.21 8.27a.75.75 0 01.02-1.06z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                            </button>
+                        </div>
+
+                        <!-- Dropdown menu -->
+                        <div id="joinDropdown"
+                            class="hidden absolute z-10  left-[-7rem] w-56 bg-white rounded-xl shadow-lg border border-gray-100">
+                            <ul class="text-[#005C81] text-sm divide-y divide-[#04C4B6]">
+                                <li><a href="/youthInvest.html"
+                                        class="block px-4 py-2 hover:text-[#04C4B6] rounded-t-xl">MARKETING
+                                        TEAM</a></li>
+                                <li><a href="/youthInvest.html"
+                                        class="block px-4 py-2 hover:text-[#04C4B6]">PROGRAM
+                                        MANAGEMENT TEAM</a></li>
+                                <li><a href="/youthInvest.html" class="block px-4 py-2 hover:text-[#04C4B6]">FINANCE
+                                        TEAM</a>
+                                </li>
+                                <li><a href="/youthInvest.html"
+                                        class="block px-4 py-2 hover:text-[#04C4B6]">RESEARCH &
+                                        WRITING TEAM</a></li>
+                                <li><a href="/youthInvest.html" class="block px-4 py-2 hover:text-[#04C4B6] rounded-b-xl">TECH
+                                        TEAM</a></li>
+                            </ul>
+                        </div>
                 </div>
                 <a href="#" class="hover:text-[#04C4B6]">DONATE</a>
                 <a href="contactUs.html" class="hover:text-[#04C4B6]">CONTACT US</a>
@@ -84,7 +144,7 @@
                         </path>
                     </svg>
                 </button>
-                <a href="#" class="hover:text-[#04C4B6]">ABOUT US</a>
+                <a href="about-us.html" class="hover:text-[#04C4B6]">ABOUT US</a>
                 <a href="vission.html" class="hover:text-[#04C4B6]">OUR VISION</a>
                 <a href="#" class="hover:text-[#04C4B6]">OUR MISSION</a>
                 <a href="#" class="hover:text-[#04C4B6]">JOIN US</a>
@@ -113,8 +173,6 @@
         <div>
             <img src="assets/svg/bookIcon.svg"
                 class="absolute h-14 md:h-20 bottom-[-520px] md:bottom-[-400px] lg:bottom-[-600px] xl:bottom-[-360px] right-[30px] md:right-[50px]">
-            <img src="assets/svg/settingIcon.svg"
-                class="absolute right-[1px] md:right-[30px] xl:right-[220px] h-10 md:h-20">
             <img src="assets/svg/stationaryIcon.svg"
                 class="absolute h-14 md:h-24 bottom-[-500px] md:bottom-[-400px] lg:bottom-[-550px] xl:bottom-[-350px] left-[40px] lg:left-[180px]">
             <img src="assets/svg/curveLine.svg"
@@ -123,10 +181,8 @@
         </div>
 
         <div class="flex justify-center mt-10">
-            <img src="/assets/png/homeBannerLayer1.png" class="h-[250px] md:h-[350px] lg:h-[500px] z-10">
-            <img src="assets/png/homeBannerLayer2.png"
-                class="h-[160px]  md:h-[230px] lg:h-[300px] absolute bottom-[40px] md:bottom-[10px] lg:bottom-[-140px] xl:bottom-[-20px] left-[-10px] md:left-[150px] xl:left-[400px]">
-        </div>
+            <img src="/assets/png/homePageBannerNew.png" class="h-[250px] md:h-[350px] lg:h-[500px] z-10">
+                </div>
         <div class="mt-20">
             <p
                 class="text-white font-lazydog uppercase text-lg md:text-3xl mx-[60px] md:mx-[100px] lg:mx-[300px]  pb-20">
@@ -172,12 +228,13 @@
                         skills while parents can trust that their children are building confidence,
                         independence, and a strong foundation for the future.
                     </p>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSe9N7EPamF0Gu0Jb3QUG3hdB-4WawERmW_OiwTHKRsipbrVjQ/viewform?usp=dialog" target="_blank">
                     <button style="box-shadow: 8px 8px 30px 0px #0076F626;"
                         class="ml-[25px] md:ml-0 mt-4 bg-[#00568C] bg-[url('/assets/png/buttonBg.png')] bg-cover bg-center font-lazydog uppercase text-white px-6 py-2 rounded-full flex items-center gap-20 md:gap-40  transition">
                         JOIN US
                         <img src="assets/svg/buttonArrow.svg" class="h-5">
                     </button>
-
+                     </a>
                 </div>
 
                 <div>
@@ -194,11 +251,13 @@
                         boost your college applications, and help empower young people with financial knowledge
                         that can change their lives.
                     </p>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdoixBN74CPU9sd_4TM2IivIfLRtVGdKANestM0C_FeHDGrVA/viewform?usp=header" target="_blank">
                     <button style="box-shadow: 8px 8px 30px 0px #0076F626;"
                         class="ml-[25px] md:ml-0 mt-4 bg-[#00568C] bg-[url('/assets/png/buttonBg.png')] bg-cover bg-center font-lazydog uppercase text-white px-6 py-2 rounded-full flex items-center gap-20 md:gap-40  transition">
                         APPLY
                         <img src="assets/svg/buttonArrow.svg" class="h-5">
                     </button>
+                    </a>
                 </div>
 
             </div>
@@ -254,7 +313,7 @@
                             details,
                             and opportunities from Youth In-Vest.
                         </p>
-                        <div class="flex flex-col mx-[40px] md:mx-0 gap-4 mb-2 justify-center">
+                        <div class="flex  mx-[40px] md:mx-0 gap-4 mb-2 justify-center  ">
                             <input type="email" placeholder="Enter your email"
                                 class="flex-1 px-4 py-3  font-lazydog rounded-lg text-[#FFFFFF] font-bold bg-transparent focus:outline-none max-w-md border-[#72CCD8] border-2" />
                             <button
